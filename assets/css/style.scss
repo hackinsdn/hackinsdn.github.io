@@ -5,11 +5,11 @@
 .inner {
   max-width: 1140px;
 }
-#header_wrap {
-  background: #000;
+#banner {
+  padding-top: 80px;
 }
-#header_wrap .inner {
-  padding: 80px 10px 30px 10px;
+.no-box-shadow {
+  box-shadow: none;
 }
 .bg-black {
   background-color:#000 !important;
