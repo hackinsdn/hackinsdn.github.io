@@ -4,7 +4,7 @@ The HackInSDN can be instantiated on distributed testbed environments such as RN
 
 # Overview
 
-The following picture illustrates the overall HackInSDN architecture.
+The picture that follows illustrates the overall HackInSDN architecture.
 
 ![HackInSDN big picture](/assets/img/hackinsdn.png){:.centered}
 
