@@ -47,4 +47,4 @@ Leia mais sobre o [Projeto Hackers do Bem](https://hackersdobem.org.br){:target=
 
 Encontrou um bug ou quer requisitar uma funcionalidade? [Reporte aqui!](https://github.com/hackinsdn/hackinsdn/issues)
 
-Para manter contato com a equipe de desenvolvimento, escreva para **hackinsdn [AT] ufba.br**.
+Para manter contato com a equipe de desenvolvimento, escreva para **hackinsdn [@] ufba.br**.
