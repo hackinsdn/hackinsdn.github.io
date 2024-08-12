@@ -19,12 +19,10 @@ Os principais módulos da ferramenta são:
 
 # Instituições parceiras
 
-{:.text-align-center}
 [![UFBA logo](/assets/img/ufba.png)](https://www.ufba.br)
 [![IFBA logo](/assets/img/ifba.png)](https://www.ifba.edu.br)
 [![FIU logo](/assets/img/fiu.png)](https://www.fiu.edu)
 
-{:.text-align-center}
 [![INSERT logo](/assets/img/insert.png)](http://insert.ufba.br)
 [![Amlight Logo](/assets/img/amlight.png)](https://www.amlight.net)
 
