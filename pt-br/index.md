@@ -2,6 +2,22 @@ O HackInSDN tem como objetivo prover mecanismos de capacitação em temas de seg
 
 HackInSDN está projetada para ser operada no ambiente distribuído de testbeds da RNP, beneficiando o sistema RNP com um serviço de capacitação em segurança cibernética que adotará a sua infraestrutura de testbeds.
 
+## Infraestrutura programável em testbed para ensino de redes e segurança GT HACKINSDN
+
+O processo de capacitação em segurança cibernética é bastante desafiador, dados os requisitos de conhecimentos em diferentes subáreas da computação. 
+Por tais motivos, um amplo conjunto de metodologias e estratégias propõe a conciliação entre a teoria e a prática no ensino dos diversos temas existentes, 
+na perspectiva de reduzir a curva de absorção de conceitos técnicos que, muitas vezes, são difíceis de serem materializados.
+
+Nossa proposta tem como objetivo desenvolver a arquitetura HackInSDN, que visa a expandir a capacitação em temas de segurança cibernética em ambientes de testbeds. Trata-se de um pacote de ferramentas que oferecerá um ambiente mais robusto e completo para capacitação emtópicos avançados de segurança por meio da programabilidade de redes.
+
+A HackInSDN abrangerá tópicos que vão além dos sistemas de detecção de intrusão, incorporando outras características — como mecanismos de detecção de novidades e anomalias apoiados pela Inteligência Artificial, outros de contenção e filtragem de ataques dinâmicos, ferramental para simulação de ataques, base de dados para
+inteligência de ameaças, entre outros.
+
+HackInSDN está projetada para ser operada no ambiente distribuído de testbeds da RNP, beneficiando o sistema RNP com um serviço de capacitação em segurança cibernética que adotará a sua infraestrutura de testbeds.
+
+## HACKINSDN AGREGA UM SERVIÇO DE CAPACITAÇÃO EM SEGURANÇA CIBERNÉTICA AOS TESTBEDS DA RNP
+
+
 # Visão Geral
 
 A Figura abaixo apresenta uma visão geral do HackInSDN.
