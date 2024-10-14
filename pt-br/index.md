@@ -6,6 +6,15 @@ O HackInSDN oferece um ambiente completo de capacitação em segurança ciberné
 O HackInSDN combina teoria e prática para formar profissionais em segurança cibernética, utilizando uma infraestrutura de testbeds. Com ferramentas avançadas, como detecção de anomalias com IA, contenção de ataques e simulação de ameaças, o projeto oferece uma capacitação completa em redes e segurança. Operando na infraestrutura distribuída da RNP, o HackInSDN prepara especialistas para lidar com cenários reais de cibersegurança.
 
 
+## O projeto opera na infraestrutura distribuída da RNP, oferecendo um serviço contínuo e prático de formação em cibersegurança.
+
+### Destaques do HackInSDN:
+
+    Detecção de intrusão e anomalias
+    Ferramentas para simulação de ataques
+    Inteligência de ameaças e contenção de ataques
+
+
 # Visão Geral
 
 A Figura abaixo apresenta uma visão geral do HackInSDN.
