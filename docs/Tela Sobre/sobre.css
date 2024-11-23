@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+header .logo-group {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 120px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.logo-text h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.logo-text p {
+    font-size: 12px;
+    margin: 0;
+    color: #ccc;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00baff;
+}
+
+/* Main Content Sections */
+main {
+    padding: 40px 20px;
+}
+
+/* Intro Section */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 60%;
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.intro-image {
+    align-self: flex-start;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sobre o Projeto Section */
+.sobre-projeto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.sobre-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.texto-sobre {
+    flex: 1;
+    max-width: 60%;
+}
+
+.texto-sobre h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.texto-sobre p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.texto-sobre p strong {
+    font-weight: bold;
+}
+
+.imagem-sobre img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-image-container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.custom-rounded-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Hackers do Bem Section */
+.hackers-do-bem-section {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+    background-color: #4d4d4d;
+    margin: 0;
+    color: white;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hackers-do-bem-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hackers-image {
+    flex-shrink: 0;
+    max-width: 400px;
+}
+
+.hackers-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hackers-text {
+    max-width: 700px;
+}
+
+.hackers-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hackers-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.hackers-text p strong {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.ficha-tecnica {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.ficha-tecnica h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.coordenadores {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.coordenador {
+    text-align: center;
+    max-width: 300px;
+}
+
+.coordenador img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coordenador h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.coordenador p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.equipe {
+    margin-top: 40px;
+}
+
+.equipe h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.membros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.membro {
+    text-align: center;
+    max-width: 120px;
+}
+
+.membro img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membro p {
+    font-size: 14px;
+    margin: 0;
+}
