@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+header .logo-group {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 120px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.logo-text h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.logo-text p {
+    font-size: 12px;
+    margin: 0;
+    color: #ccc;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 40px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00baff; /* Cor azul para o link ativo */
+}
+
+.event-section {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .event-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Espaçamento entre os blocos */
+        padding: 15px;
+        background-color: #fff; /* Fundo preto */
+    }
+
+    .event-card {
+        display: flex;
+        flex-direction: column; /* Imagem em cima, texto embaixo */
+        background-color: #2b2b2b; /* Fundo escuro */
+        border-radius: 8px; /* Bordas arredondadas */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        overflow: hidden;
+        margin: 0 auto; /* Centraliza os blocos */
+        max-width: 90%;
+    }
+
+    .event-card img {
+        width: 100%; /* Imagem ocupa toda a largura */
+        height: auto;
+        display: block;
+        margin-bottom: -100px; /* Remove o espaço entre a imagem e o texto */
+        padding: 0; /* Remove padding adicional */
+    }
+
+    .event-content {
+        padding: 10px; /* Ajusta o espaçamento interno do texto */
+        margin: 0; /* Remove margens extras */
+    }
+
+    .event-content h3 {
+        font-size: 18px;
+        margin-bottom: 5px; /* Pequeno espaçamento abaixo do título */
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .event-content p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #eaeaea;
+        text-align: justify;
+        margin: 0; /* Remove margens adicionais ao redor do parágrafo */
+        padding: 0; /* Remove espaçamento interno extra */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        background-color: #000; 
+        padding: 10px 20px;
+        color: #fff; 
+    }
+
+    .logo-group {
+        margin-bottom: 10px; 
+    }
+
+    .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    nav ul {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        gap: 20px; 
+    }
+
+    nav ul li {
+        margin: 0; 
+    }
+
+    nav ul li a {
+        font-size: 14px; 
+        color: #fff; 
+        text-decoration: none; 
+        padding: 8px 10px; 
+        transition: color 0.3s ease; 
+    }
+
+    nav ul li a:hover {
+        color: #00aaff; 
+    }
+}
