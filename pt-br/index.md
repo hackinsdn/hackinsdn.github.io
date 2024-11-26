@@ -1,3 +1,6 @@
+<meta http-equiv="refresh" content="0; url=https://hackinsdn.ufba.br/docs/Home/home.html" />
+
+
 O HackInSDN oferece um ambiente completo de capacitação em segurança cibernética, com ferramentas avançadas como detecção de anomalias com IA, contenção de ataques e simulação de ameaças. Utilizando a programabilidade de redes, o projeto opera na infraestrutura de testbeds da RNP para formar profissionais em tópicos avançados de cibersegurança.
 
 
