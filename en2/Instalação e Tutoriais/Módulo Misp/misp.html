@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISP Module Tutorial</title>
+    <link rel="stylesheet" href="misp.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-group">
+            <div class="logo">
+                <img src="imagens/logo.PNG" alt="HackInSDN Logo">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../Index/index.html">Home</a></li>
+                <li><a href="../../Tela_Sobre/sobre.html">About Us</a></li>
+                <li><a href="../../Instalação e Tutoriais/tutorial.html">Tutorials</a></li>
+                <li><a href="../../Blog/blog.html">Publications</a></li>
+                <li><a href="../../https://dashboard.hackinsdn.ufba.br/login/" target="_blank">Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu-idiomas">
+            <ul class="menu-idiomas">
+                <li>
+                  <a href="tutorial.html" class="pt">
+                    <img src="imagens/brasil.png" alt="Portuguese" class="bandeira">
+                  </a>
+                </li>
+                <li>
+                    <a href="https://hackinsdn.ufba.br/en2/Instala%C3%A7%C3%A3o%20e%20Tutoriais/M%C3%B3dulo%20Misp/misp.html" class="en ativo" target="_blank">
+                    <img src="imagens/Americana.png" alt="English" class="bandeira">
+                  </a>
+                </li>
+              </ul>
+          </nav>
+          
+    </header>
+
+    <div class="container">
+
+        <section class="tutorial-content">
+            <h1>MISP MODULE TUTORIAL</h1>
+            <h2>Installing MISP Threat Sharing (MISP)</h2>
+            <p>This tutorial is based on the official MISP website instructions (<a href="https://misp-project.org/" target="_blank">https://misp-project.org/</a>). The HackInSDN project utilizes Docker container solutions with images maintained by Stefano Ortolani of VMware, which are regularly updated in the MISP GitHub repository. Access MISP documentation for installation options. Instructions for installation using images maintained by Stefano Ortolani can be found at: <a href="https://github.com/MISP/misp-docker" target="_blank">https://github.com/MISP/misp-docker</a>.</p>
+            <p>Minimum requirements to implement a MISP instance:</p>
+            <ul>
+                <li>A Linux virtual machine (preferably with Debian 12 or Ubuntu 24.04 LTS distributions) with:</li>
+                <li>1 processor</li>
+                <li>4 GB RAM</li>
+                <li>80 GB disk space</li>
+                <li>Latest version of Docker Desktop and/or Docker Engine.</li>
+            </ul>
+            
+            <div class="step">
+                <h3>Installation Steps:</h3>
+                <p><strong>Step 1:</strong> Clone the misp-docker repository. Execute the following command in your terminal:</p>
+                <pre><code>git clone https://github.com/MISP/misp-docker/ && cd docker-misp</code></pre>
+                <p><strong>Step 2:</strong> Copy the environment file and remove its temporary prefix:</p>
+                <pre><code>cp template.env .env</code></pre>
+                <p><strong>Step 3:</strong> Inside the created directory, check if the <code>docker-compose.yml</code> file was downloaded correctly. If so, you will need to pull precompiled images or build new ones, with the second option being more recommended. To pull precompiled images:</p>
+                <pre><code>docker compose pull</code></pre>
+                <p>To build new images:</p>
+                <pre><code>docker compose build</code></pre>
+                <p>NOTE: The image generation process may take some time. Wait until it is completed before proceeding to the next step. In case of errors, refer to the Troubleshooting section available in the repository referenced in this tutorial.</p>
+                <p><strong>Step 4:</strong> Now, you need to load the containers responsible for enabling the necessary components (misp, misp-modules, redis, database, and mail) for MISP to function.</p>
+                <pre><code>docker compose up</code></pre>
+                <p><strong>Step 5:</strong> Access the MISP web interface at <a href="https://localhost" target="_blank">https://localhost</a> using the credentials:</p>
+                <ul>
+                    <li>Email: <code>admin@admin.test</code></li>
+                    <li>Password: <code>admin</code></li>
+                </ul>
+            </div>
+        
+            <h3>Configuring the MISP Threat Sharing (MISP) Instance</h3>
+            <p>After installing MISP, some configurations are required, such as changing passwords, creating organizations, and adding new users.</p>
+            <p>To change the default user password, click on <strong>Administration » List Users</strong>, then <em>Set password</em>. After entering the new password, confirm the current password (<code>admin</code>) and submit the changes.</p>
+            <p>To create a new organization, click on <strong>Administration » Add Organisations</strong> and fill in the fields with the name, UUID, description, nationality, sector, and other relevant information about your organization.</p>
+            <p>To create a new user, click on <strong>Administration » Add User</strong> and fill in the fields with the name, email, password, role, organization, and other pertinent information for the new user in your organization.</p>
+        
+            <h3>Installing PyMISP</h3>
+            <p>PyMISP is a Python library that facilitates interaction with the MISP platform through its REST API. With PyMISP, you can perform operations such as retrieving events, adding or modifying events and attributes, uploading or updating samples, and searching for attributes. To install the library, follow the steps below:</p>
+            <p><strong>Step 1:</strong> Install the required dependencies:</p>
+            <pre><code>pip3 install pymisp</code></pre>
+            <p><strong>Step 2:</strong> Access the directory at <a href="https://github.com/MISP/PyMISP/tree/main/examples" target="_blank">https://github.com/MISP/PyMISP/tree/main/examples</a></p>
+            <p>Modify the <code>keys.py.sample</code> file to include your MISP URL and API key:</p>
+            <pre><code>cd examples
+        cp keys.py.sample keys.py
+        vim keys.py</code></pre>
+            
+            <h3>Data Export and Import Scripts</h3>
+            <p>To export compromised IPs from your MISP instance in Suricata rule format, run the <code>export_suricata</code> script:</p>
+            <pre><code>sh export_suricata</code></pre>
+            <p>To export indicators of compromise for a specific event in CSV format, run the <code>export_csv</code> script with the following command:</p>
+            <pre><code>python3 export_csv -e -f</code></pre>
+            <p>The <code>importCauma.py</code> script performs basic data import into a MISP instance. In the example below, malicious URLs collected from the Malicious URL Catalog (<a href="https://cauma.pop-ba.rnp.br/" target="_blank">https://cauma.pop-ba.rnp.br/</a>) are inserted. To execute the script, use the command:</p>
+            <pre><code>python3 importCauma.py</code></pre>
+        
+            <h3>References</h3>
+            <ul>
+                <li><a href="https://github.com/MISP/PyMISP" target="_blank">PyMISP</a></li>
+                <li><a href="https://www.misp-project.org/documentation/" target="_blank">MISP Documentation</a></li>
+                <li><a href="https://github.com/misp/misp-docker" target="_blank">MISP-Docker Repository</a></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
