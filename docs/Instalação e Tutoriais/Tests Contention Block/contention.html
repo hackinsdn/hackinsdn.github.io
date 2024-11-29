@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Instalação do Kytos</title>
+    <link rel="stylesheet" href="contention.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-group">
+            <div class="logo">
+                <img src="imagens/logo.PNG" alt="HackInSDN Logo">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Trabalho Isa\home.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="tutoriais.html">Tutoriais</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="https://dashboard.hackinsdn.ufba.br/login/" target="_blank">Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="tutorial-content">
+            <h1>TESTS CONTENTION BLOCK (AÇÃO DE BLOQUEIO)</h1>
+            
+            <div class="step">
+                <h2>TEST 01:</h2>
+                <p>To create a containment to block traffic from VLAN 100 at the switch <code>00:00:00:00:00:00:00:01</code> port 1, one would have to run the following command:</p>
+                <pre><code>curl -H 'Content-type: application/json' -X POST http://127.0.0.1:8181/api/hackinsdn/containment/v1 -d '{"switch": "00:00:00:00:00:00:00:01", "interface": 1, "match": {"vlan": 100}}'</code></pre>
+                <p>Result: "contention created successfully ID 6a3c2d9afdd94136"</p>
+                <p>Drop the block (Only rule ID):</p>
+                <pre><code>curl -H 'Content-type: application/json' -X DELETE http://127.0.0.1:8181/api/hackinsdn/containment/v1 -d '{"block_id": "6a3c2d9afdd94136"}'</code></pre>
+                <p>Result: "contention deleted successfully ID 6a3c2d9afdd94136"</p>
+            </div>
+        
+            <div class="step">
+                <h2>TEST 02:</h2>
+                <p>To create a containment to block traffic from IPv4 <code>10.1.0.254</code> on VLAN 100 at the switch <code>00:00:00:00:00:00:00:01</code> port 1, one would have to run the following command:</p>
+                <pre><code>curl -H 'Content-type: application/json' -X POST http://127.0.0.1:8181/api/hackinsdn/containment/v1 -d '{"switch": "00:00:00:00:00:00:00:01", "interface": 1, "match": {"vlan": 100, "ipv4_dst": "10.1.0.254"}}'</code></pre>
+                <p>Result: "contention created successfully ID 85b47cd567bb4b44"</p>
+            </div>
+        
+            <div class="step">
+                <h2>TEST 03:</h2>
+                <p>To create a containment to block traffic from IPv4 <code>10.1.0.254</code> on VLAN 100 and UDP protocol at the switch <code>00:00:00:00:00:00:00:01</code> port 1, one would have to run the following command:</p>
+                <pre><code>curl -H 'Content-type: application/json' -X POST http://127.0.0.1:8181/api/hackinsdn/containment/v1 -d '{"switch": "00:00:00:00:00:00:00:01", "interface": 1, "match": {"vlan": 100, "ipv4_dst": "10.1.0.254", "ip_proto":17}}'</code></pre>
+                <p>Result: "contention created successfully ID 8b47dda543cc4ad3"</p>
+            </div>
+        
+            <div class="step">
+                <h2>TEST 04:</h2>
+                <p>To list existing containments, one would have to run the following command (two options):</p>
+                <pre><code>curl -s http://127.0.0.1:8181/api/hackinsdn/containment/v1/ or curl -X GET -H 'Content-type: application/json' http://127.0.0.1:8181/api/hackinsdn/containment/v1/</code></pre>
+            </div>
+        
+            <div class="step">
+                <h2>TEST 05:</h2>
+                <p>NAPP doesn't allow duplicate rules to be created:</p>
+                <p>Add rule:</p>
+                <pre><code>curl -H 'Content-type: application/json' -X POST http://127.0.0.1:8181/api/hackinsdn/containment/v1 -d '{"switch": "00:00:00:00:00:00:00:01", "interface": 1, "match": {"vlan": 100}}'</code></pre>
+                <p>Result: "contention created successfully ID 6a3c2d9afdd94136"</p>
+                <p>Add rule again:</p>
+                <pre><code>curl -H 'Content-type: application/json' -X POST http://127.0.0.1:8181/api/hackinsdn/containment/v1 -d '{"switch": "00:00:00:00:00:00:00:01", "interface": 1, "match": {"vlan": 100}}'</code></pre>
+                <p>Result: "RULE already exists in the list. Contentation doesn’t created"</p>
+            </div>
+        
+            <div class="step">
+                <h2>TESTS with IPV6:</h2>
+                <p>Além dos testes apresentados, é possível criar regras também com match para IPV6. Para isso, considere a VLAN101. É possível também add no match o "ipv6_src" ou "ipv6_dst".</p>
+            </div>
+        </section>
+    </div>
