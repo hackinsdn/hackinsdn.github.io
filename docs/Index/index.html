@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackInSDN - Página Sobre</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-group">
+                <div class="logo">
+                    <img src="Imagens/1.png" alt="Logotipo HackInSDN">
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="../Tela_Sobre/sobre.html">Sobre Nós</a></li>
+                    <li><a href="../Instalação e Tutoriais/tutorial.html">Tutoriais</a></li>
+                    <li><a href="../Blog/blog.html">Publicações</a></li>
+                    <li><a href="https://dashboard.hackinsdn.ufba.br/login/" target="_blank">Dashboard</a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu-idiomas">
+                <ul class="menu-idiomas">
+                    <li>    
+                    </li>
+                    <li>
+                      <a href="https://hackinsdn.ufba.br/en2/Index/index.html" class="en ativo">
+                        <img src="Imagens/Americana.png" alt="English" class="bandeira">
+                      </a>
+                    </li>
+                  </ul>
+              </nav>
+              
+        </header>
+    </div>
+
+    <div class="container">
+        <main>
+            <section class="intro-section">
+                <div class="intro-text">
+                    <h1>HackInSDN</h1>
+                    <p>Tem como objetivo fortalecer a cibersegurança por meio de testbeds, desenvolvendo ferramentas carregadas com elementos de cenário para o entendimento de ataques e bloqueio de ameaças. Combinado com infraestruturas FPGA distribuídas e um design que proporciona flexibilidade de rede e um ambiente robusto para treinamento.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="Imagens/Digital.jpg" alt="Design Gráfico"> 
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section class="feature-section">
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="Imagens/18.png" alt="Teclado e Segurança"> 
+            </div>
+            <div class="feature-text">
+                <h2>Infraestrutura programável de testbed para treinamento em redes e segurança</h2>
+                <p>O processo de fortalecimento da cibersegurança é bastante desafiador, dado os requisitos de conhecimento em diferentes subáreas da computação.</p>
+                <p>Por isso, um conjunto abrangente de metodologias e estratégias propõe a reconciliação entre teoria e prática no ensino de diversos tópicos existentes, visando reduzir a curva de aprendizado de conceitos técnicos, muitas vezes difíceis de materializar.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <main>
+            <section class="description-section">
+                <p>
+                    Nossa proposta visa desenvolver a arquitetura <strong>HackInSDN</strong>, que busca expandir o treinamento em <strong>cibersegurança em ambientes de testbed</strong>. É um conjunto de ferramentas que oferecerá um ambiente mais robusto e completo para treinamento em tópicos avançados de segurança por meio de programabilidade de redes.
+                </p>
+                <p>
+                    HackInSDN abordará tópicos além dos sistemas de detecção de intrusão, incorporando outros recursos — como mecanismos de detecção de novidades e anomalias apoiados por <strong>Inteligência Artificial</strong>, ferramentas dinâmicas de contenção e filtragem de ataques, ferramentas de simulação de ataques, bancos de dados de inteligência de ameaças, e mais.
+                </p>
+            </section>
+
+            <hr class="section-divider"> 
+
+            <br>
+            <br>
+            <br>
+
+            <section class="overview-section">
+                <h2>Visão Geral</h2>
+                <p>A figura abaixo apresenta uma visão geral do HackInSDN.</p>
+                <div class="overview-diagram">
+                    <img src="Imagens/Diagrama.png" alt="Diagrama de Visão Geral">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section class="module-section-container">
+        <div class="module-section">
+            <h2>Os principais módulos da ferramenta são:</h2>
+            <div class="module-item">
+                <h3>- Detecção de Anomalias Baseada em IA</h3>
+                <p>Este componente se integrará ao Orquestrador de Rede e receberá uma série de métricas de rede para processar algoritmos estatísticos de aprendizado de máquina e, então, gerar Alertas de Anomalias.</p>
+            </div>
+            <div class="module-item">
+                <h3>- Suricata</h3>
+                <p>O Suricata é uma ferramenta de alto desempenho que pode atuar como IDS (Sistema de Detecção de Intrusão) ou IPS (Sistema de Prevenção de Intrusão) e promove o monitoramento da segurança de redes. É um software de código aberto mantido pela fundação sem fins lucrativos Open Information Security Foundation (OISF).</p>
+            </div>
+            <div class="module-item">
+                <h3>- Orquestrador de Rede Programável - Kytos-ng</h3>
+                <p>O Orquestrador de Rede Programável desempenha um papel central na arquitetura, fornecendo serviços de gerenciamento e provisionamento de redes, integrando outros componentes. O Kytos-ng (<a href="https://kytos-ng.github.io" target="_blank">https://kytos-ng.github.io</a>) é a plataforma de orquestração SDN que será usada como base para o HackInSDN, pois incorpora uma solução de controle SDN escalável, flexível e altamente personalizável/programável.</p>
+            </div>
+            <div class="module-item">
+                <h3>- Espelhamento Adaptativo</h3>
+                <p>Este módulo será desenvolvido dentro do projeto HackInSDN para permitir um espelhamento granular e elástico de tráfego nos serviços de rede provisionados pelo Orquestrador.</p>
+            </div>
+            <div class="module-item">
+                <h3>- Contenção e Filtragem Inteligente</h3>
+                <p>O papel deste módulo é fornecer serviços de contenção e filtragem de ataques com base nas anomalias detectadas e alertas ou solicitações do operador de rede.</p>
+            </div>
+            <div class="module-item">
+                <h3>- Inteligência e Compartilhamento de Ameaças com MISP</h3>
+                <p>Mecanismos de inteligência de ameaças e compartilhamento de informações são essenciais para a defesa moderna e pesquisa em segurança.</p>
+            </div>
+            <div class="module-item">
+                <h3>- Simulador de Adversários</h3>
+                <p>Um conjunto de ferramentas de última geração focado em segurança ofensiva estará disponível como parte do projeto HackInSDN, com o objetivo de realizar hacking ético e simular tráfego malicioso no ambiente descrito.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner-section">
+        <h2>Instituições Parceiras</h2>
+        <div class="logos-container">
+            <img src="Imagens/6.png" alt="UFBA">
+            <img src="Imagens/7.png" alt="Instituto Federal da Bahia">
+            <img src="Imagens/8.png" alt="Florida International University">
+            <img src="Imagens/9.png" alt="INSERT">
+            <img src="Imagens/10.png" alt="AmLight ExP">
+        </div>
+        
+        <h2>Agradecimentos</h2>
+        <p>O projeto HackInSDN foi selecionado na <a href="https://example.com/chamada-hackers-do-bem" target="_blank">chamada pública Hackers do Bem para Pesquisa e Desenvolvimento 2023</a>.</p>
+        <p>Leia mais sobre o <a href="https://example.com/projeto-hackers-do-bem" target="_blank">Projeto Hackers do Bem</a>.</p>
+    
+        <h2>Suporte</h2>
+        <p>Encontrou um bug ou deseja solicitar uma funcionalidade? <a href="https://example.com/reporte-aqui" target="_blank">Reporte aqui!</a></p>
+        <p>Para entrar em contato com a equipe de desenvolvimento, escreva para <a href="mailto:hackinsdn@ufba.br">hackinsdn [@] ufba.br</a>.</p>
+    </section>
+
+    <div class="container">
+        <footer>
+            <p>© 2024 HackInSDN. Todos os direitos reservados.</p>
+        </footer>
+    </div> 
+
+</body>
+</html>
