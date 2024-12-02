@@ -194,8 +194,6 @@ nav ul li a:hover {
     }
 }
 
-/* Menu Header */
-
 @media (max-width: 768px) {
     header {
         display: flex;
@@ -208,7 +206,7 @@ nav ul li a:hover {
     }
 
     .logo-group {
-        margin-bottom: 15px; /* Mais espaço entre logo e menu */
+        margin-bottom: 10px; 
     }
 
     .logo img {
@@ -219,13 +217,12 @@ nav ul li a:hover {
     nav ul {
         display: flex; 
         flex-direction: row; 
-        flex-wrap: wrap; /* Permite quebra automática se necessário */
         justify-content: center; 
         align-items: center; 
         list-style: none; 
         padding: 0; 
         margin: 0; 
-        gap: 15px; /* Reduz o espaçamento para caber melhor */
+        gap: 20px; 
     }
 
     nav ul li {
@@ -236,18 +233,11 @@ nav ul li a:hover {
         font-size: 14px; 
         color: #fff; 
         text-decoration: none; 
-        padding: 8px 12px; /* Mais espaço clicável */
+        padding: 8px 10px; 
         transition: color 0.3s ease; 
-        border-radius: 4px; /* Melhora a acessibilidade visual */
     }
 
-    nav ul li a:hover,
-    nav ul li a:active {
+    nav ul li a:hover {
         color: #00aaff; 
-        background-color: rgba(255, 255, 255, 0.1); /* Feedback visual sutil */
-    }
-
-    nav ul li a:focus {
-        outline: 2px solid #00aaff; /* Acessibilidade para navegação por teclado */
     }
 }

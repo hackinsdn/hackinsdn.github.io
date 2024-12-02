@@ -314,19 +314,11 @@
 
 @media (max-width: 768px) {
     .demo-video {
-        display: block; /* Torna o vídeo visível no mobile */
-        padding: 0; /* Remove espaçamento interno */
-        margin: 0 auto; /* Centraliza o bloco */
-        width: 100%; /* Garante que o bloco ocupe toda a largura disponível */
-        max-width: 400px; /* Limita a largura máxima */
-    }
-
-    .demo-video img {
-        width: 100%; /* Ajusta a imagem para ocupar a largura do container */
-        height: auto; /* Mantém as proporções corretas */
-        border: none; /* Remove bordas */
-        border-radius: 8px; /* Opcional: bordas arredondadas */
-        display: block; /* Garante que a imagem seja renderizada como bloco */
+        display: block; /* Torna os vídeos visíveis no mobile */
+        padding: 0px; /* Espaçamento interno */
+        margin: 0 auto; /* Centraliza os vídeos */
+        width: 100%; /* Garante que o vídeo ocupe toda a largura disponível */
+        max-width: 400px; /* Define um limite máximo de largura */
     }
 
     .demo-video iframe {
@@ -334,7 +326,7 @@
         height: auto; /* Mantém as proporções */
         aspect-ratio: 16 / 9; /* Define uma proporção padrão de vídeo */
         border: none; /* Remove bordas extras */
+        
     }
 }
-
 
