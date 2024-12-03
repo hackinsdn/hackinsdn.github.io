@@ -395,6 +395,52 @@ footer {
         object-fit: cover; 
     }
 }
+@media (max-width: 768px) {
+    .hackers-do-bem-section {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #4d4d4d;
+        color: #ffffff;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hackers-do-bem-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .hackers-image {
+        display: none;
+    }
+
+    .hackers-text {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .hackers-text h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .hackers-text p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+
+    .hackers-text p strong {
+        font-weight: bold;
+        color: #ffffff;
+    }
 
 @media (max-width: 768px) {
     header {
