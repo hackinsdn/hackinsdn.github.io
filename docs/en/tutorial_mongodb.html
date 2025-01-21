@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kytos Installation Tutorial</title>
+    <link rel="stylesheet" href="/assets/css/mongodb.css">
+    <link rel="icon" href="/assets/img/favicon.ico">
+</head>
+<body>
+
+    <header>
+            <div class="logo-group">
+                <div class="logo">
+                    <img src="/assets/img/1.png" alt="HackInSDN Logo">
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">About Us</a></li>
+                    <li><a href="tutoriais.html">Tutorials</a></li>
+                    <li><a href="publicacoes.html">Publications</a></li>
+                    <li><a href="https://dashboard.hackinsdn.ufba.br/login/">Dashboard</a></li>
+                </ul>
+            </nav>
+            <nav class="menu-idiomas">
+               <ul class="menu-idiomas">
+                    <li>
+                      <a href="/tutorial_mongodb.html" class="pt">
+                         <img src="/assets/img/br.png" alt="Portuguese" class="bandeira">
+                      </a>
+                    </li>
+                    <li>
+                    </li>
+               </ul>
+            </nav>
+    </header>
+
+    <div class="container">
+
+    <section class="tutorial-content">
+        <h1>CONFIGURING MONGODB</h1>
+        <p>If you need to change the configuration, edit the <code>/etc/mongod.conf</code> file to adjust parameters such as <code>bindIP</code> and ports. After editing the file, restart MongoDB:</p>
+        <pre><code>sudo systemctl restart mongod</code></pre>
+    
+        <div class="step">
+            <h2>Step 7: Installing Mininet and Configuring VLANs</h2>
+            <p>1. Install Mininet:</p>
+            <pre><code>sudo apt install mininet</code></pre>
+            <p>2. To run Mininet with a linear topology of 3 switches and a remote controller:</p>
+            <pre><code>sudo mn --topo=linear,3 --controller=remote,ip=127.0.0.1</code></pre>
+            <p>3. To configure VLANs on the machines:</p>
+            <pre><code>h1 ip link add link h1-eth0 name vlan198 type vlan id 198
+    h1 ip link set up vlan198
+    h1 ip addr add 10.1.98.1/24 dev vlan198
+    
+    h3 ip link add link h3-eth0 name vlan198 type vlan id 198
+    h3 ip link set up vlan198
+    h3 ip addr add 10.1.98.3/24 dev vlan198</code></pre>
+            <p>4. Test if the ping responds between hosts:</p>
+            <pre><code>h1 ping 10.1.98.3</code></pre>
+        </div>
+    
+        <div class="step">
+            <h2>Step 8: Necessary Configurations After Restarting the Environment</h2>
+            <p>1. Activate the virtual environment and configure MongoDB variables:</p>
+            <pre><code>source test/bin/activate
+    export MONGO_USERNAME=k1
+    export MONGO_PASSWORD=k1
+    export MONGO_DBNAME=k1</code></pre>
+            <p>2. Start Kytos with the MongoDB database:</p>
+            <pre><code>kytosd -f --database mongodb</code></pre>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
