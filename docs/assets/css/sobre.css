@@ -502,7 +502,7 @@ footer {
     }
 }
 .btn {
-  background-color: #008CBA; /* Green */
+  background-color: #007bff;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -514,6 +514,5 @@ footer {
   transition-duration: 0.4s;
 }
 .btn:hover {
-  background-color: white;
-  color: #008CBA;
+  background-color: #0069d9;
 }
